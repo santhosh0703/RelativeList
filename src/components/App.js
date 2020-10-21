@@ -2,15 +2,17 @@ import React, {Component, useState} from "react";
 import '../styles/App.css';
 
 class App extends Component {
-    relatives=["p1","p2","p3","p4"];
+   
     render() {
-       
+        let  relatives=["p1","p2","p3","p4"];
         return(
+         <>
            <ol key="relativeList">
             {this.relatives.map((relative,index)=>(
-                <li key={`relativeListItem${index+1}`}>{relative}</li>
+                <li key={"relativeListItem"+(index+1)}>{relative}</li>
                 ))}
 	       <ol/>
+           </>
         );
     }
 }  
